@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .ball {
+            width: 50px;
+            height: 50px;
+            background: green;
+            border-radius: 50%;
+            offset-path: path('M20,20 C20,100 200,0 200,100');
+        }
+        .tiny-ball {
+            width: 10px;
+            height: 10px;
+            background: green;
+            border-radius: 50%;
+
+        }
+        .spawner {
+            height: 100vh;
+            width: 100vw;
+            background: aliceblue;
+            position: absolute;
+            top: 0;
+            z-index: -9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+      .square {
+        width: 50px;
+        height: 50px;
+        background: red;
+      }
+        .controls {
+            margin-bottom: 100px;
+        }
+    </style>
+    <div class="controls">
+      <button class="start">Start</button>
+      <button class="spawn">Attach animation</button>
+      <button class="despawn">Release animations</button>
+      <button class="reverse">Reverse</button>
+      <button class="finish">Finish</button>
+      <button class="pause">Pause</button>
+      <button class="resume">Resume</button>
+      <button class="cancel">Cancel</button>
+      <button class="destroy">Destroy</button>
+      <div>
+        <h2>Time</h2>
+        <input style="width: 100%" class="scrub" value="0" type="range" min="0" max="100"/>
+      </div>
+      <div>
+        <h2>Speed</h2>
+        <input style="width: 100%" class="speed" value="1" type="range" min="-10" max="10"/>
+      </div>
+    </div>
+    
+    <div class="ball"></div>
+    <div class="square"></div>
+    
+    <div class="spawner">
+        <div class="tiny-ball"></div>
+    </div>
+</body>
+</html>
