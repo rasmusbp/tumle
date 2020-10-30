@@ -37,7 +37,7 @@ export class ReactiveAnimation {
     constructor(private animation: Animation, public element: Element) {
       this.action$.subscribe(event => this.actionHandler(event));
     }
-        
+    // TODO: How to "pause" ticks emitting when animation is idle? 
     public progress$ = this.action$.pipe(
         ofTypes(ActionTypes.PLAY, ActionTypes.SCRUB),
         switchMapTo(tick$.pipe(
